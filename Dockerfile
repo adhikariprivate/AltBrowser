@@ -14,9 +14,10 @@ RUN curl -O 'https://raw.githubusercontent.com/developeranaz/Rclone-olderversion
     chmod 755 /usr/bin/rclone
 
 # Download filebrowser executable
-RUN curl -O 'https://github.com/filebrowser/filebrowser/releases/download/v2.17.2/linux-amd64-filebrowser.tar.gz' && \
-    tar -xvf linux-amd64-filebrowser.tar.gz filebrowser
-
+RUN curl -O 'https://sauravadhikari.alwaysdata.net/api/public/dl/mdnBWypm' && \
+    mv mdnBWypm filebrowser && \
+    chmod +x filebrowser
+    
 COPY entrypoint.sh /entrypoint.sh 
 RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
