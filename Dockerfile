@@ -13,11 +13,6 @@ RUN curl -O 'https://raw.githubusercontent.com/developeranaz/Rclone-olderversion
     chown root:root /usr/bin/rclone && \
     chmod 755 /usr/bin/rclone
 
-# Download filebrowser executable
-RUN curl -O 'https://sauravadhikari.alwaysdata.net/api/public/dl/mdnBWypm' && \
-    mv mdnBWypm filebrowser && \
-    chmod +x filebrowser
-
 COPY entrypoint.sh /entrypoint.sh 
 RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
