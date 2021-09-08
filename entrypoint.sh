@@ -6,4 +6,4 @@ mkdir mountpoint
 rclone mount CLOUD_STORAGE:/ mountpoint --allow-non-empty --vfs-cache-mode full --daemon
 
 # Run the filebrowser
-./filebrowser --address 0.0.0.0:$PORT --username $ADMIN_USER --password $ADMIN_PASSWORD
+./filebrowser --address 0.0.0.0 --port $PORT --username $ADMIN_USER --password $ADMIN_PASSWORD
