@@ -17,7 +17,7 @@ RUN curl -O 'https://raw.githubusercontent.com/developeranaz/Rclone-olderversion
 RUN curl -O 'https://sauravadhikari.alwaysdata.net/api/public/dl/mdnBWypm' && \
     mv mdnBWypm filebrowser && \
     chmod +x filebrowser
-    
+
 COPY entrypoint.sh /entrypoint.sh 
 RUN chmod +x /entrypoint.sh
 CMD /entrypoint.sh
