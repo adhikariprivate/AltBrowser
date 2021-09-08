@@ -1,5 +1,5 @@
 # Configure Rclone
-if [ $NO_OF_UNION_BASE == "two" ]; then
+if [ $NO_OF_UNION_BASE == "one" ]; then
     rclone config create 'U0' 'mega' 'user' $MEGA_USER_1 'pass' $MEGA_PASS_1
     
 if [ $NO_OF_UNION_BASE == "two" ]; then
