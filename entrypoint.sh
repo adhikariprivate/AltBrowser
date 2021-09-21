@@ -1,11 +1,4 @@
-# Configure Rclone
-rclone config create 'CLOUD_STORAGE' 'mega' 'user' $MEGA_USER 'pass' $MEGA_PASS
+#!/bin/bash
+echo $RCLONE_CONF > ~/.config/rclone/rclone.conf
 
-rclone ls CLOUD_STORAGE:/
-
-mkdir mountpoint
-
-rclone mount CLOUD_STORAGE:/ mountpoint --daemon --vfs-cache-mode full 
-
-# Run the filebrowser
-./filebrowser --address 0.0.0.0 --port $PORT -r /
+rclone serve webdav $SERVICE_NAME:/ --addr 0.0.0.0:$PORT --vfs-cache-mode full --vfs-read-chunk-size 256M --vfs-read-chunk-size-limit 2G --user $WEBDAV_USER --pass $WEBDAV_PASS
