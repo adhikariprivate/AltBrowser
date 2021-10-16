@@ -1,2 +1,2 @@
 # AltBrowser
-Alternate webui for popular cloud services using file browser and rclone
+Creates an FTP Server based on the rclone config environment variables that are provided.
