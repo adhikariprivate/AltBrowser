@@ -4,7 +4,7 @@ RUN set -ex\
     && apt upgrade -y \
     && apt install curl -y \
     && apt install unzip -y
-RUN curl -O 'https://raw.githubusercontent.com/developeranaz/Rclone-olderversion-Backup/main/rclone-current-linux-arm64.zip' && \
+RUN curl -O 'https://downloads.rclone.org/rclone-current-linux-arm64.zip' && \
     unzip rclone-current-linux-arm64.zip && \
     cp /rclone-*-linux-arm64/rclone /usr/bin/ && \
     chown root:root /usr/bin/rclone && \
